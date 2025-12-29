@@ -1,0 +1,111 @@
+{
+  "name": "taskmanager-vscode",
+  "displayName": "TaskManager",
+  "description": "Task management extension with file tracking and cloud synchronization. Create, organize, and sync tasks across devices with offline support.",
+  "version": "1.4.2",
+  "publisher": "taskmanager",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Productivity"
+  ],
+  "keywords": [
+    "task",
+    "todo",
+    "productivity",
+    "management",
+    "sync",
+    "file-tracking",
+    "offline"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taskmanager/vscode-extension"
+  },
+  "homepage": "https://github.com/taskmanager/vscode-extension",
+  "bugs": {
+    "url": "https://github.com/taskmanager/vscode-extension/issues"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tmOpenPanel",
+        "title": "Open TaskManager",
+        "icon": "$(checklist)"
+      },
+      {
+        "command": "tmSync",
+        "title": "Sync with Server",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "tmLogin",
+        "title": "Login to TaskManager",
+        "icon": "$(sign-in)"
+      },
+      {
+        "command": "tmRegister",
+        "title": "Register to TaskManager",
+        "icon": "$(person-add)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "taskmanager",
+          "title": "TaskManager",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "taskmanager": [
+        {
+          "type": "webview",
+          "id": "taskmanagerSidebar",
+          "name": "TaskManager"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "TaskManager",
+      "properties": {
+        "taskmanager.apiUrl": {
+          "type": "string",
+          "default": "https://hjmvhbdp-8080.euw.devtunnels.ms",
+          "description": "Backend API server URL"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --allow-missing-repository --no-yarn"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.7.1",
+    "typescript": "^5.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "bundledDependencies": [
+    "axios"
+  ],
+  "bundleDependencies": [
+    "axios"
+  ]
+}

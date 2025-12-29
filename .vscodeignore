@@ -1,0 +1,13 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+tsconfig.json
+**/*.map
+**/*.ts
+package-lock.json
+webpack.config.js
+include_axios.py
+include-axios.js
+INSTALLATION.md
+*.vsix
