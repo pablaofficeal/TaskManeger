@@ -103,7 +103,7 @@ You can configure settings per workspace by adding them to `.vscode/settings.jso
 
 ```json
 {
-  "taskmanager.apiUrl": "https://your-backend-server.com"
+  "taskmanager.apiUrl": "https://hjmvhbdp-8080.euw.devtunnels.ms/"
 }
 ```
 
@@ -146,7 +146,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-None at this time. Please report issues on [GitHub](https://github.com/taskmanager/vscode-extension/issues).
+None at this time. Please report issues on [GitHub](https://github.com/pablaofficeal/TaskManeger/issues).
 
 ## Release Notes
 
